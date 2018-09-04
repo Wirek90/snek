@@ -59,7 +59,6 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
         HP = player.checkHealth();
         timer(player);
         player.changeHealth(1000);
-      //  currentHealth();
         destroy();
 
     }
@@ -74,7 +73,7 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
                 Duration.millis(10000),
                 ae -> {
                     player.resetHealth(HP);
-                    System.out.println(HP);
+           //         System.out.println(HP);
                 }));
         timeline.play();
 
