@@ -39,26 +39,4 @@ public class MedkitPowerUp extends GameEntity implements Interactable{
     public String getMessage() {
         return "10 health added";
     }
-
-
-//    public SimpleEnemy(Pane pane) {
-//        super(pane);
-//
-//        setImage(Globals.simpleEnemy);
-//        pane.getChildren().add(this);
-//        int speed = 1;
-//        Random rnd = new Random();
-//        setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
-//        setY(rnd.nextDouble() * Globals.WINDOW_HEIGHT);
-//
-//        double direction = rnd.nextDouble() * 360;
-//        setRotate(direction);
-//        heading = Utils.directionToVector(direction, speed);
-//    }
-//
-//    @Override
-//    public void apply(SnakeHead player) {
-//        player.changeHealth(-damage);
-//        destroy();
-//    }
 }

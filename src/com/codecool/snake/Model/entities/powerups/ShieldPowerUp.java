@@ -67,8 +67,8 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
 
     public void Timer(){
         Timeline timeline = new Timeline(new KeyFrame(
-                Duration.millis(10000),
-                ae -> System.out.println("asd")));
+                Duration.millis(1000),
+                ae -> System.out.println(Duration.millis(1000))));
         timeline.play();
 
     }
