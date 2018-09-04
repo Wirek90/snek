@@ -27,6 +27,7 @@ import java.util.Random;
 public class PowerUp extends GameEntity implements Interactable{
 
     private static final int health = 10;
+    private static final int maxHealth = 100;
 
     public PowerUp(Pane pane) {
         super(pane);
@@ -40,9 +41,14 @@ public class PowerUp extends GameEntity implements Interactable{
 
     @Override
     public void apply(SnakeHead player) {
-        player.changeHealth(+health);
-        destroy();
-
+        if (player.checkHealth().equals(maxHealth)){
+            player.checkHealth();
+            destroy();
+        } else {
+            player.changeHealth(+health);
+            player.checkHealth();
+            destroy();
+        }
     }
 
     @Override
