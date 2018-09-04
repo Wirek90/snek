@@ -24,12 +24,12 @@ import java.util.Random;
 
 import java.util.Random;
 
-public class PowerUp extends GameEntity implements Interactable{
+public class MedkitPowerUp extends GameEntity implements Interactable{
 
     private static final int health = 10;
     private static final int maxHealth = 100;
 
-    public PowerUp(Pane pane) {
+    public MedkitPowerUp(Pane pane) {
         super(pane);
         setImage(Globals.medkitPowerUp);
         pane.getChildren().add(this);
