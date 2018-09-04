@@ -42,11 +42,11 @@ public class PowerUp extends GameEntity implements Interactable{
     @Override
     public void apply(SnakeHead player) {
         if (player.checkHealth().equals(maxHealth)){
-            player.checkHealth();
+            System.out.println("Player have " + player.checkHealth() + " health");
             destroy();
         } else {
             player.changeHealth(+health);
-            player.checkHealth();
+            System.out.println("Player have " + player.checkHealth() + " health");
             destroy();
         }
     }
