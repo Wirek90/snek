@@ -40,6 +40,7 @@ import javafx.util.Duration;
 
 public class ShieldPowerUp extends GameEntity implements Interactable {
 
+    int HP;
 
 
     public ShieldPowerUp(Pane pane) {
@@ -55,7 +56,10 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
 
     @Override
     public void apply(SnakeHead player) {
-        Timer();
+        HP = player.checkHealth();
+        timer(player);
+        player.changeHealth(1000);
+      //  currentHealth();
         destroy();
 
     }
@@ -65,11 +69,15 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
         return "You gain 10 second shield. Have no fear!";
     }
 
-    public void Timer(){
+    public void timer(SnakeHead player){
         Timeline timeline = new Timeline(new KeyFrame(
-                Duration.millis(1000),
-                ae -> System.out.println(Duration.millis(1000))));
+                Duration.millis(10000),
+                ae -> {
+                    player.resetHealth(HP);
+                    System.out.println(HP);
+                }));
         timeline.play();
 
     }
+
 }

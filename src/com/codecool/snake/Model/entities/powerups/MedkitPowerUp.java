@@ -25,7 +25,7 @@ public class MedkitPowerUp extends GameEntity implements Interactable{
 
     @Override
     public void apply(SnakeHead player) {
-        if (player.checkHealth().equals(maxHealth)){
+        if (player.checkHealth() >= maxHealth){
             System.out.println("Player have " + player.checkHealth() + " health");
             destroy();
         } else {
