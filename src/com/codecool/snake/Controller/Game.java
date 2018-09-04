@@ -31,9 +31,7 @@ public class Game extends Pane {
         new MedkitPowerUp(this);
 
         new ShieldPowerUp(this);
-        new ShieldPowerUp(this);
-        new ShieldPowerUp(this);
-        new ShieldPowerUp(this);
+
     }
 
     public void start() {

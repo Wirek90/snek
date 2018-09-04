@@ -5,6 +5,7 @@ import com.codecool.snake.Model.Utils;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
 import javafx.animation.KeyFrame;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import com.codecool.snake.View.GameEntity;
 import com.codecool.snake.Model.Globals;
@@ -42,7 +43,6 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
 
     int HP;
 
-
     public ShieldPowerUp(Pane pane) {
         super(pane);
         setImage(Globals.shieldPowerUp);
@@ -57,6 +57,9 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
     @Override
     public void apply(SnakeHead player) {
         HP = player.checkHealth();
+        //   Globals.snakeHead = setImage();
+        //  System.out.println(Globals.snakeHead);
+        //setImage(Globals.simpleEnemy);
         timer(player);
         player.changeHealth(1000);
         destroy();
@@ -73,6 +76,7 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
                 Duration.millis(10000),
                 ae -> {
                     player.resetHealth(HP);
+                 //   Globals.snakeHead = new Image("simple_enemy.png");
            //         System.out.println(HP);
                 }));
         timeline.play();
