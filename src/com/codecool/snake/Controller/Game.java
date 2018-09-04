@@ -1,6 +1,7 @@
 package com.codecool.snake.Controller;
 
 import com.codecool.snake.Model.entities.powerups.MedkitPowerUp;
+import com.codecool.snake.Model.entities.powerups.ShieldPowerUp;
 import com.codecool.snake.View.GameLoop;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
@@ -29,6 +30,10 @@ public class Game extends Pane {
         new MedkitPowerUp(this);
         new MedkitPowerUp(this);
 
+        new ShieldPowerUp(this);
+        new ShieldPowerUp(this);
+        new ShieldPowerUp(this);
+        new ShieldPowerUp(this);
     }
 
     public void start() {
