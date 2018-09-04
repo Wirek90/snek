@@ -1,7 +1,7 @@
-package com.codecool.snake;
+package com.codecool.snake.Model;
 
-import com.codecool.snake.entities.GameEntity;
-import com.codecool.snake.entities.snakes.SnakeHead;
+import com.codecool.snake.View.GameLoop;
+import com.codecool.snake.View.GameEntity;
 import javafx.scene.image.Image;
 
 import java.util.Collections;

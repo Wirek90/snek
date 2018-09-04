@@ -1,5 +1,7 @@
 package com.codecool.snake;
 
+import com.codecool.snake.Controller.Game;
+import com.codecool.snake.Model.Globals;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

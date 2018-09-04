@@ -1,4 +1,4 @@
-package com.codecool.snake;
+package com.codecool.snake.Model;
 
 import javafx.geometry.Point2D;
 

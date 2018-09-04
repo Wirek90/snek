@@ -1,10 +1,10 @@
-package com.codecool.snake.entities.snakes;
+package com.codecool.snake.Model.entities.snakes;
 
-import com.codecool.snake.entities.GameEntity;
-import com.codecool.snake.Globals;
-import com.codecool.snake.entities.Animatable;
-import com.codecool.snake.Utils;
-import com.codecool.snake.entities.Interactable;
+import com.codecool.snake.View.GameEntity;
+import com.codecool.snake.Model.Globals;
+import com.codecool.snake.Model.entities.Animatable;
+import com.codecool.snake.Model.Utils;
+import com.codecool.snake.Model.entities.Interactable;
 import javafx.geometry.Point2D;
 import javafx.scene.layout.Pane;
 

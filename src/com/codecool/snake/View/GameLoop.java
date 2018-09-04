@@ -1,7 +1,8 @@
-package com.codecool.snake;
+package com.codecool.snake.View;
 
-import com.codecool.snake.entities.GameEntity;
-import com.codecool.snake.entities.Animatable;
+import com.codecool.snake.Model.Globals;
+import com.codecool.snake.View.GameEntity;
+import com.codecool.snake.Model.entities.Animatable;
 import javafx.animation.AnimationTimer;
 
 public class GameLoop extends AnimationTimer {
