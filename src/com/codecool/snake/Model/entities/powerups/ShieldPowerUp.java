@@ -15,6 +15,7 @@ import javafx.util.Duration;
 public class ShieldPowerUp extends GameEntity implements Interactable {
 
     int HP;
+    int TIMER = 10000;
 
     public ShieldPowerUp(Pane pane) {
         super(pane);
@@ -46,7 +47,7 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
 
     public void timer(SnakeHead player){
         Timeline timeline = new Timeline(new KeyFrame(
-                Duration.millis(10000),
+                Duration.millis(TIMER),
                 ae -> {
                     player.resetHealth(HP);
                  //   Globals.snakeHead = new Image("simple_enemy.png");
