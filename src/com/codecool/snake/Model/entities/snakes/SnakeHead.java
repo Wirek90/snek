@@ -1,28 +1,27 @@
 package com.codecool.snake.Model.entities.snakes;
 
-import com.codecool.snake.View.GameEntity;
+import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.Animatable;
 import com.codecool.snake.Model.Utils;
 import com.codecool.snake.Model.entities.Interactable;
 import javafx.geometry.Point2D;
 import javafx.scene.layout.Pane;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Alert;
 
 public class SnakeHead extends GameEntity implements Animatable {
 
-    private static final float speed = 2;
-    private static final float turnRate = 2;
+    private static final float speed = 1;
+    private static final float turnRate = 1;
     private GameEntity tail; // the last element. Needed to know where to add the next part.
     private int health;
     private int length;
+
 
     public SnakeHead(Pane pane, int xc, int yc) {
         super(pane);
         setX(xc);
         setY(yc);
+        Globals.gameOver = false;
         length = 0;
         health = 100;
         tail = this;
@@ -61,10 +60,12 @@ public class SnakeHead extends GameEntity implements Animatable {
         if (isOutOfBounds() || health <= 0) {
             System.out.println("Game Over");
             Globals.gameLoop.stop();
-            ButtonType restartButt = new ButtonType("RESTART");
-            ButtonType exitButt = new ButtonType("EXIT");
-            Alert alert = new Alert(Alert.AlertType.INFORMATION,"GAME OVER!\nYOU SCORED: " + length, restartButt, exitButt);
-            alert.show();
+            Globals.gameOver = true;
+
+            //ButtonType restartButt = new ButtonType("RESTART");
+          //  ButtonType exitButt = new ButtonType("EXIT");
+           // Alert alert = new Alert(Alert.AlertType.INFORMATION,"GAME OVER!\nYOU SCORED: " + length, restartButt, exitButt);
+           // alert.show();
         }
     }
 
@@ -82,6 +83,10 @@ public class SnakeHead extends GameEntity implements Animatable {
     public Integer checkHealth(){
 //        System.out.println("Player have " + health + " health");
         return health;
+    }
+
+    public static Float getSpeed(){
+        return speed;
     }
 
     public void resetHealth(int diff){

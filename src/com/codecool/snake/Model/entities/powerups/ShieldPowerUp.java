@@ -1,38 +1,11 @@
 package com.codecool.snake.Model.entities.powerups;
 
 import com.codecool.snake.Model.Globals;
-import com.codecool.snake.Model.Utils;
-import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
 import javafx.animation.KeyFrame;
-import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
-import com.codecool.snake.View.GameEntity;
-import com.codecool.snake.Model.Globals;
-import com.codecool.snake.Model.entities.Animatable;
-import com.codecool.snake.Model.Utils;
+import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.Interactable;
-import com.codecool.snake.Model.entities.snakes.SnakeHead;
-import javafx.geometry.Point2D;
-import javafx.scene.layout.Pane;
-import com.codecool.snake.View.GameEntity;
-
-import com.codecool.snake.View.GameEntity;
-import com.codecool.snake.Model.Globals;
-import com.codecool.snake.Model.entities.Interactable;
-import com.codecool.snake.Model.entities.snakes.SnakeHead;
-import javafx.scene.layout.Pane;
-
-import com.codecool.snake.Model.Globals;
-import com.codecool.snake.Model.entities.snakes.SnakeHead;
-import javafx.scene.layout.Pane;
-import com.codecool.snake.View.GameEntity;
-import com.codecool.snake.Model.entities.Interactable;
-
-import java.awt.event.ActionListener;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import java.util.Random;
 
