@@ -21,6 +21,7 @@ public class    Globals {
     public static Image powerupBerry = new Image("powerup_berry.png");
     public static Image shieldPowerUp = new Image("shield.png");
     public static Image medkitPowerUp = new Image("medicine.png");
+    public static Image simpleLaser = new Image("simplelaser.png");
     //.. put here the other images you want to use
     public static boolean gameOver;
     public static boolean leftKeyDown;
