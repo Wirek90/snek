@@ -10,25 +10,14 @@ import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
 import com.codecool.snake.Model.entities.powerups.SimplePowerup;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Circle;
-import javafx.util.Duration;
-
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import static jdk.nashorn.internal.objects.NativeMath.random;
 
 public class Game extends Pane {
     SnakeHead snek;
 
     public Game() {
-        RespawnPowerUps RespawnPowerUpsObject = new RespawnPowerUps();
+        Respawn respawnObject = new Respawn();
         snek = new SnakeHead(this, 500, 500);
 
         new SimpleEnemy(this);
@@ -55,12 +44,12 @@ public class Game extends Pane {
         new MedkitPowerUp(this);
 
         new ShieldPowerUp(this);
-        RespawnPowerUpsObject.respawnMedkit();
-        RespawnPowerUpsObject.respawnShield();
-        RespawnPowerUpsObject.respawnEnemy();
-        RespawnPowerUpsObject.respawnEagle();
-        RespawnPowerUpsObject.respawnMongoose();
-        RespawnPowerUpsObject.respawnBerry();
+        respawnObject.respawnMedkit();
+        respawnObject.respawnShield();
+        respawnObject.respawnEnemy();
+        respawnObject.respawnEagle();
+        respawnObject.respawnMongoose();
+        respawnObject.respawnBerry();
 
 
 

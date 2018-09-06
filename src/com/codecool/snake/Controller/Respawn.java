@@ -24,7 +24,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static jdk.nashorn.internal.objects.NativeMath.random;
-public class RespawnPowerUps extends Pane{
+public class Respawn extends Pane{
 
     public void respawnMedkit() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), ev -> {
