@@ -1,5 +1,6 @@
 package com.codecool.snake.Controller;
 
+import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.Interactable;
 import com.codecool.snake.Model.entities.lasers.SimpleLaser;
 import com.codecool.snake.Model.entities.powerups.MedkitPowerUp;
@@ -24,12 +25,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static jdk.nashorn.internal.objects.NativeMath.random;
-public class Respawn extends Pane{
+
+public class Respawn extends Pane {
+    int respawnOfMedkit = 5;
+
 
     public void respawnMedkit() {
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), ev -> {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(respawnOfMedkit), ev -> {
             new MedkitPowerUp(Globals.gamePane);
-            new SimpleEnemy(Globals.gamePane);
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
