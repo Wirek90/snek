@@ -4,74 +4,47 @@ import com.codecool.snake.Model.entities.Interactable;
 import com.codecool.snake.Model.entities.lasers.SimpleLaser;
 import com.codecool.snake.Model.entities.powerups.MedkitPowerUp;
 import com.codecool.snake.Model.entities.powerups.ShieldPowerUp;
+import com.codecool.snake.Model.entities.enemies.SimpleEnemyEagle;
+import com.codecool.snake.Model.entities.enemies.SimpleEnemyMongoose;
 import com.codecool.snake.View.GameLoop;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
 import com.codecool.snake.Model.entities.powerups.SimplePowerup;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
-import com.codecool.snake.Model.Globals;
-import com.codecool.snake.Model.entities.snakes.SnakeHead;
-import javafx.scene.layout.Pane;
-import com.codecool.snake.Model.entities.GameEntity;
-import com.codecool.snake.Model.entities.Interactable;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-//public class RespawnPowerUps implements Interactable {
-//
-//    public void Resp(Pane pane) {
-//        super(pane);
-//    int secondPassed = 0;
-//    SnakeHead snek;
-//    //snek = new SnakeHead(this, 500, 500);
-//    Timer myTimer = new Timer();
-//    TimerTask task = new TimerTask() {
-//        @Override
-//        public void run() {
-//
-//         //     secondPassed++;
-//            new MedkitPowerUp(Globals.gamePane);
-//          //  System.out.println(secondPassed);
-//        }
-//    };}
-//
-//
-//    public void start() {
-//     //   myTimer.scheduleAtFixedRate(task, 1000, 1000);
-//    }
-//
-//    @Override
-//    public void apply(SnakeHead player) {
-//
-//    }
-//
-//    @Override
-//    public String getMessage() {
-//        return null;
-//    }
+import static jdk.nashorn.internal.objects.NativeMath.random;
+public class RespawnPowerUps extends Pane{
 
-//    public void Game() {
-//        snek = new SnakeHead(this, 500, 500);
-//        new SimpleEnemy(this);
-//        new SimpleEnemy(this);
-//        new SimpleEnemy(this);
-//        new SimpleEnemy(this);
-//
-//        new SimplePowerup(this);
-//        new SimplePowerup(this);
-//        new SimplePowerup(this);
-//        new SimplePowerup(this);
-//
-//        new MedkitPowerUp(this);
-//        new MedkitPowerUp(this);
-//        new MedkitPowerUp(this);
-//        new MedkitPowerUp(this);
-//
-//        new ShieldPowerUp(this);
-//
-//    }
+    public void respawn() {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), ev -> {
+            new MedkitPowerUp(Globals.gamePane);
+            new SimpleEnemy(Globals.gamePane);
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+    }
 
-//}
+    public void respawnEnemy() {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
+            new SimpleEnemy(Globals.gamePane);
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+    }
+
+    //    Random generator = new Random();
+//            int randomNumber;
+//            randomNumber = generator.nextInt(11);
+
+}

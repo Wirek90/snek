@@ -10,17 +10,25 @@ import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
 import com.codecool.snake.Model.entities.powerups.SimplePowerup;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
+
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import static jdk.nashorn.internal.objects.NativeMath.random;
 
 public class Game extends Pane {
     SnakeHead snek;
 
     public Game() {
-
+        RespawnPowerUps RespawnPowerUpsObject = new RespawnPowerUps();
         snek = new SnakeHead(this, 500, 500);
 
         new SimpleEnemy(this);
@@ -47,45 +55,8 @@ public class Game extends Pane {
         new MedkitPowerUp(this);
 
         new ShieldPowerUp(this);
-
-
-
-
-//        for(int i=0; i<1000000; i++) {
-//
-//            m.add(generator.nextInt(100001));
-//            if (m.get(i).equals(100000)) {
-//                new MedkitPowerUp(this);
-//            }
-//            System.out.println(m.get(i));
-//
-//        }
-
-
-//
-//
-    Random generator = new Random();
-    Timer myTimer = new Timer();
-    TimerTask task = new TimerTask() {
-
-        int secondPassed = 0;
-
-        @Override
-        public void run() {
-
-
-            int randomNumber;
-            secondPassed++;
-            randomNumber = generator.nextInt(11);
-          //   System.out.println(randomNumber);
-          //  Globals.addGameObject(new MedkitPowerUp(Globals.gamePane));
-             if (randomNumber == 10){
-         //        new MedkitPowerUp(Globals.gamePane);
-             }
-
-        }};
-        myTimer.scheduleAtFixedRate(task, 1000, 1000);
-
+        RespawnPowerUpsObject.respawn();
+        RespawnPowerUpsObject.respawnEnemy();
 
 
 
