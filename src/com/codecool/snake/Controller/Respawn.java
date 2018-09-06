@@ -24,12 +24,28 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static jdk.nashorn.internal.objects.NativeMath.random;
-public class RespawnPowerUps extends Pane{
+public class Respawn extends Pane{
 
-    public void respawn() {
+    public void respawnMedkit() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), ev -> {
             new MedkitPowerUp(Globals.gamePane);
             new SimpleEnemy(Globals.gamePane);
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+    }
+
+    public void respawnShield() {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), ev -> {
+            new ShieldPowerUp(Globals.gamePane);
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+    }
+
+    public void respawnBerry() {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), ev -> {
+            new SimplePowerup(Globals.gamePane);
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
@@ -42,6 +58,23 @@ public class RespawnPowerUps extends Pane{
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }
+
+    public void respawnEagle() {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(3), ev -> {
+            new SimpleEnemyEagle(Globals.gamePane);
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+    }
+
+    public void respawnMongoose() {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(3), ev -> {
+            new SimpleEnemyMongoose(Globals.gamePane);
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+    }
+
 
     //    Random generator = new Random();
 //            int randomNumber;
