@@ -10,6 +10,9 @@ import com.codecool.snake.Model.entities.powerups.SimplePowerup;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Game extends Pane {
     SnakeHead snek;
@@ -35,12 +38,52 @@ public class Game extends Pane {
 
         new ShieldPowerUp(this);
 
+
+
+
+//        for(int i=0; i<1000000; i++) {
+//
+//            m.add(generator.nextInt(100001));
+//            if (m.get(i).equals(100000)) {
+//                new MedkitPowerUp(this);
+//            }
+//            System.out.println(m.get(i));
+//
+//        }
+
+
+//
+//
+    Random generator = new Random();
+    Timer myTimer = new Timer();
+    TimerTask task = new TimerTask() {
+
+        int secondPassed = 0;
+
+        @Override
+        public void run() {
+
+
+            int randomNumber;
+            secondPassed++;
+            randomNumber = generator.nextInt(11);
+          //   System.out.println(randomNumber);
+          //  Globals.addGameObject(new MedkitPowerUp(Globals.gamePane));
+             if (randomNumber == 10){
+                 new MedkitPowerUp(Globals.gamePane);
+             }
+
+        }};
+        myTimer.scheduleAtFixedRate(task, 1000, 1000);
+
+
+
+
     }
 
     public void start() {
         Globals.gamePane = this;
         Globals.snake = snek;
-
         Scene scene = getScene();
         scene.setOnKeyPressed(event -> {
             switch (event.getCode()) {
