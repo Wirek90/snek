@@ -2,6 +2,7 @@ package com.codecool.snake.Model.entities.powerups;
 
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
+import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.scene.layout.Pane;
 import com.codecool.snake.Model.entities.GameEntity;
@@ -16,6 +17,7 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
 
     int HP;
     int TIMER = 10000;
+    private static final int timeToDelete = 9;
 
     public ShieldPowerUp(Pane pane) {
         super(pane);
@@ -25,6 +27,10 @@ public class ShieldPowerUp extends GameEntity implements Interactable {
         Random rnd = new Random();
         setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
         setY(rnd.nextDouble() * Globals.WINDOW_HEIGHT);
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(timeToDelete), e -> destroy()));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
     }
 
 

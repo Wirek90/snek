@@ -1,5 +1,6 @@
 package com.codecool.snake.Controller;
 
+import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.lasers.SimpleLaser;
 import com.codecool.snake.Model.entities.powerups.MedkitPowerUp;
 import com.codecool.snake.Model.entities.powerups.ShieldPowerUp;
@@ -15,9 +16,16 @@ import javafx.scene.layout.Pane;
 
 public class Game extends Pane {
     SnakeHead snek;
-
     public Game() {
         Respawn respawnObject = new Respawn();
+//        GameEntity GameEntityObject = new GameEntity(this) {
+//            @Override
+//            public void destroy() {
+//                super.destroy();
+//            }
+//        };
+
+
         snek = new SnakeHead(this, 500, 500);
 
         new SimpleEnemy(this);
@@ -39,10 +47,6 @@ public class Game extends Pane {
         new SimplePowerup(this);
 
         new MedkitPowerUp(this);
-        new MedkitPowerUp(this);
-        new MedkitPowerUp(this);
-        new MedkitPowerUp(this);
-
         new ShieldPowerUp(this);
 
         respawnObject.respawnMedkit();
