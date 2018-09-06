@@ -38,10 +38,6 @@ public class SnekHealthMenu {
             hbox.getChildren().add(iv);
         }
 
-//        for(ImageView iv : imgView){
-//            hbox.getChildren().remove(0);
-//        }
-
         hbox.getChildren().addAll();
         Globals.gamePane.getChildren().addAll(hbox);
 

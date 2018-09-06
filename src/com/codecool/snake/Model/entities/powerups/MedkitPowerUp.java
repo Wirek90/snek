@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class MedkitPowerUp extends GameEntity implements Interactable{
 
-    private static final int health = 10;
+    private static final int health = 20;
     private static final int maxHealth = 100;
 
     public MedkitPowerUp(Pane pane) {
