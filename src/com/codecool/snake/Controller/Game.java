@@ -57,49 +57,6 @@ public class Game extends Pane {
         new ShieldPowerUp(this);
         respawn();
 
-
-
-
-//        for(int i=0; i<1000000; i++) {
-//
-//            m.add(generator.nextInt(100001));
-//            if (m.get(i).equals(100000)) {
-//                new MedkitPowerUp(this);
-//            }
-//            System.out.println(m.get(i));
-//
-//        }
-
-
-//
-//
-//    Random generator = new Random();
-//    Timer myTimer = new Timer();
-//    TimerTask task = new TimerTask() {
-//
-//        int secondPassed = 0;
-//
-//        @Override
-//        public void run() {
-//
-//
-//            int randomNumber;
-//         //   secondPassed++;
-//            randomNumber = generator.nextInt(11);
-//          //   System.out.println(randomNumber);
-//            MedkitPowerUp MedkitPowerUpObject = new MedkitPowerUp(Globals.gamePane);
-//            MedkitPowerUpObject.getMessage();
-//         //    Globals.addGameObject(new MedkitPowerUp(Globals.gamePane));
-//             if (randomNumber == 10){
-//         //        new MedkitPowerUp(Globals.gamePane);
-//             }
-//
-//        }};
-//        myTimer.scheduleAtFixedRate(task, 1000, 1000);
-
-
-
-
     }
     public void respawn() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), ev -> {
