@@ -30,6 +30,9 @@ public class GameLoop extends AnimationTimer {
         super.stop();
         Globals.gamePane.getChildren().clear();
         Globals.snake.destroy();
+        GameOver over = new GameOver();
+        over.start(Globals.primaryStage);
+
     }
 
     public void pause() {
@@ -69,4 +72,7 @@ public class GameLoop extends AnimationTimer {
         Globals.primaryStage.show();
         Globals.game.start();
     }
+
+
+
 }

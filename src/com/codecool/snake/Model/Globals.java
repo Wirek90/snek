@@ -48,7 +48,7 @@ public class    Globals {
     public static SnakeHead snake;
     public static Pane gamePane;
     public static int health = 100;
-
+    public static int length;
 
     static {
         gameObjects = new LinkedList<>();

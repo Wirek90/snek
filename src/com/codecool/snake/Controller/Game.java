@@ -44,13 +44,13 @@ public class Game extends Pane {
         new MedkitPowerUp(this);
 
         new ShieldPowerUp(this);
+
         respawnObject.respawnMedkit();
         respawnObject.respawnShield();
         respawnObject.respawnEnemy();
         respawnObject.respawnEagle();
         respawnObject.respawnMongoose();
         respawnObject.respawnBerry();
-
 
 
     }

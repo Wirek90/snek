@@ -36,7 +36,7 @@ import javafx.stage.Stage;
             final Image btnImg = new Image( "snake_head.png" );
             ImageView imageView = new ImageView(btnImg);
             Button btn = new Button("\tNEW GAME", imageView);
-            btn.setLayoutX(450);
+            btn.setLayoutX(400);
             btn.setLayoutY(150);
 
             Group root = new Group();
@@ -52,9 +52,6 @@ import javafx.stage.Stage;
             btn.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-
-                   // Globals.game = new Game();
-                    System.out.println("EVENT!");
                     Globals.gameLoop = new GameLoop();
                     Globals.gameLoop.startGame(primaryStage);
 
