@@ -1,6 +1,6 @@
 package com.codecool.snake.Model.entities.snakes;
 
-import com.codecool.snake.View.GameEntity;
+import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.Animatable;
 import com.sun.javafx.geom.Vec2d;

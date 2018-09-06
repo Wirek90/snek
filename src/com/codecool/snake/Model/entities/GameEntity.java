@@ -1,4 +1,4 @@
-package com.codecool.snake.View;
+package com.codecool.snake.Model.entities;
 
 import com.codecool.snake.Model.Globals;
 import javafx.scene.image.ImageView;

@@ -1,7 +1,7 @@
 package com.codecool.snake.View;
 
 import com.codecool.snake.Model.Globals;
-import com.codecool.snake.View.GameEntity;
+import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.Animatable;
 import javafx.animation.AnimationTimer;
 

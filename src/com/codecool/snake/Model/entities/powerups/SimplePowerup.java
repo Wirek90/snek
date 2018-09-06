@@ -1,6 +1,6 @@
 package com.codecool.snake.Model.entities.powerups;
 
-import com.codecool.snake.View.GameEntity;
+import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.Interactable;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
