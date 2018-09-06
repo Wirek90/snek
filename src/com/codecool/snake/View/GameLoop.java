@@ -22,4 +22,23 @@ public class GameLoop extends AnimationTimer {
         Globals.gameObjects.removeAll(Globals.oldGameObjects);
         Globals.oldGameObjects.clear();
     }
+
+    public void stop() {
+        super.stop();
+        Globals.gamePane.getChildren().clear();
+        Globals.snake.destroy();
+    }
+
+    public void pause() {
+        if(!Globals.isPaused) {
+            super.stop();
+            Globals.isPaused = !Globals.isPaused;
+        } else {
+            super.start();
+            Globals.isPaused = !Globals.isPaused;
+        }
+    }
+
+    public void restart() {
+    }
 }
