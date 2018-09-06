@@ -47,6 +47,7 @@ public class    Globals {
     public static GameLoop gameLoop;
     public static SnakeHead snake;
     public static Pane gamePane;
+    public static int health = 100;
 
 
     static {
