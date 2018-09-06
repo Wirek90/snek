@@ -41,22 +41,6 @@ public class SnekMenu {
             }
         });
 
-//        final javafx.scene.image.ImageView imv = new javafx.scene.image.ImageView();
-//
-//        HBox hbox = new HBox();
-//        hbox.setPadding(new Insets(5));
-//        hbox.setSpacing(30);
-//        hbox.setStyle("-fx-background-color: #336699;");
-//        hbox.setPrefWidth(Globals.WINDOW_WIDTH);
-//        hbox.setPrefHeight(40);
-//        HBox.setHgrow(imv, Priority.ALWAYS);
-//        hbox.setAlignment(Pos. TOP_RIGHT);
-//
-//        final Image image2 = new Image("heart.png");
-//        imv.setImage(image2);
-//
-//        hbox.getChildren().addAll(imv);
-//        game.getChildren().addAll(hbox);
 
   //      primaryStage.setTitle("Snake Game");
     //    primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));

@@ -14,21 +14,26 @@ public class SnekHealthMenu {
     public void generateHealthMenu(Game game){
 
         Globals.hBox = new HBox();
-        final ImageView imv = new ImageView();
+        for(int i = 0; i < 5; i++) {
+            final ImageView imv + "i" = new ImageView();
+        }
+        //final ImageView imv2 = new ImageView();
 
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(5));
-        hbox.setSpacing(30);
+        hbox.setSpacing(5);
         hbox.setStyle("-fx-background-color: #336699;");
         hbox.setPrefWidth(Globals.WINDOW_WIDTH);
         hbox.setPrefHeight(40);
         HBox.setHgrow(imv, Priority.ALWAYS);
         hbox.setAlignment(Pos. TOP_RIGHT);
 
-        final Image image2 = new Image("heart.png");
-        imv.setImage(image2);
+        final Image img = new Image("heart.png");
+        imv.setImage(img);
 
-        hbox.getChildren().addAll(imv);
+        imv2.setImage(img);
+
+        hbox.getChildren().addAll(imv, imv2);
         Globals.gamePane.getChildren().addAll(hbox);
 
     }

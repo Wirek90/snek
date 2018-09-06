@@ -23,7 +23,6 @@ public class SnakeHead extends GameEntity implements Animatable {
         setY(yc);
         Globals.gameOver = false;
         length = 0;
-        health = 100;
         tail = this;
         setImage(Globals.snakeHead);
         pane.getChildren().add(this);
@@ -59,7 +58,7 @@ public class SnakeHead extends GameEntity implements Animatable {
         }
 
         // check for game over condition
-        if (isOutOfBounds() || health <= 0) {
+        if (isOutOfBounds() || Globals.health <= 0) {
             System.out.println("Game Over");
             Globals.gameLoop.stop();
             Globals.gameOver = true;
@@ -79,12 +78,12 @@ public class SnakeHead extends GameEntity implements Animatable {
     }
 
     public void changeHealth(int diff) {
-        health += diff;
+        Globals.health += diff;
     }
 
     public Integer checkHealth(){
 //        System.out.println("Player have " + health + " health");
-        return health;
+        return Globals.health;
     }
 
     public static Float getSpeed(){
@@ -92,7 +91,7 @@ public class SnakeHead extends GameEntity implements Animatable {
     }
 
     public void resetHealth(int diff){
-        health = diff;
+        Globals.health = diff;
     }
 
 
