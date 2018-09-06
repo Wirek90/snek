@@ -39,7 +39,7 @@ public class SimpleEnemyEagle extends GameEntity implements Animatable, Interact
         }
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());
-        System.out.println(heading);
+       // System.out.println(heading);
     }
 
     @Override

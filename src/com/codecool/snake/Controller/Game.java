@@ -80,7 +80,7 @@ public class Game extends Pane {
           //   System.out.println(randomNumber);
           //  Globals.addGameObject(new MedkitPowerUp(Globals.gamePane));
              if (randomNumber == 10){
-                 new MedkitPowerUp(Globals.gamePane);
+         //        new MedkitPowerUp(Globals.gamePane);
              }
 
         }};
