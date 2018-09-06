@@ -14,7 +14,7 @@ import javafx.util.Duration;
 
 public class MedkitPowerUp extends GameEntity implements Interactable{
 
-    private static final int health = 10;
+    private static final int health = 20;
     private static final int maxHealth = 100;
     private static final int timeToDelete = 3;
 

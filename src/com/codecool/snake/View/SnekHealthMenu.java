@@ -20,7 +20,7 @@ public class SnekHealthMenu {
 
         ArrayList<ImageView> imgView = new ArrayList(5);
 
-        for(int i = 1; i < 6; i++){
+        for(int i = 1; i < Globals.health/20; i++){
             ImageView iv = new ImageView();
             iv.setImage(img);
             imgView.add(iv);
