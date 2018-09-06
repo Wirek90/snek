@@ -28,7 +28,7 @@ public class Game extends Pane {
     SnakeHead snek;
 
     public Game() {
-
+        RespawnPowerUps RespawnPowerUpsObject = new RespawnPowerUps();
         snek = new SnakeHead(this, 500, 500);
 
         new SimpleEnemy(this);
@@ -55,15 +55,11 @@ public class Game extends Pane {
         new MedkitPowerUp(this);
 
         new ShieldPowerUp(this);
-        respawn();
+        RespawnPowerUpsObject.respawn();
+        RespawnPowerUpsObject.respawnEnemy();
 
-    }
-    public void respawn() {
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(10), ev -> {
-            new MedkitPowerUp(Globals.gamePane);
-        }));
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
+
+
     }
 
     public void start() {
