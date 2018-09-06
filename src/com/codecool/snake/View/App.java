@@ -52,8 +52,6 @@ import javafx.stage.Stage;
             btn.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-
-
                     Game game = new Game();
                     Globals.gamePane = game;
                     SnekMenu gameMenu = new SnekMenu();
