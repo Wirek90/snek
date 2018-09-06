@@ -19,7 +19,7 @@ public class GameOver extends Application {
       try {
          Pane root = new Pane();
          //background settings
-         final Image titleScreen = new Image( "end_screen.png" ); //title screen image
+         final Image titleScreen = new Image( "title_screen.png" ); //title screen image
          final ImageView flashScreen_node = new ImageView();
          flashScreen_node.setImage(titleScreen); //set the image of the title screen
          primaryStage.setTitle("Welcome to Snek!!!!!");

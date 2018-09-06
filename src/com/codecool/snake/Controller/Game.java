@@ -47,10 +47,6 @@ public class Game extends Pane {
         new SimplePowerup(this);
 
         new MedkitPowerUp(this);
-        new MedkitPowerUp(this);
-        new MedkitPowerUp(this);
-        new MedkitPowerUp(this);
-
         new ShieldPowerUp(this);
 
         respawnObject.respawnMedkit();

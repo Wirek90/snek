@@ -16,7 +16,7 @@ public class MedkitPowerUp extends GameEntity implements Interactable{
 
     private static final int health = 20;
     private static final int maxHealth = 100;
-    private static final int timeToDelete = 3;
+    private static final int timeToDelete = 8;
 
     public MedkitPowerUp(Pane pane) {
         super(pane);
