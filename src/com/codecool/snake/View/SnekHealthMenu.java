@@ -7,7 +7,8 @@ import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
+import java.util.ArrayList;
+
 
 public class SnekHealthMenu {
 
@@ -15,8 +16,15 @@ public class SnekHealthMenu {
 
         Globals.hBox = new HBox();
 
-        final ImageView imv = new ImageView();
-        final ImageView imv2 = new ImageView();
+        final Image img = new Image("heart.png");
+
+        ArrayList<ImageView> imgView = new ArrayList(5);
+
+        for(int i = 1; i < 6; i++){
+            ImageView iv = new ImageView();
+            iv.setImage(img);
+            imgView.add(iv);
+        }
 
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(5));
@@ -24,14 +32,13 @@ public class SnekHealthMenu {
         hbox.setStyle("-fx-background-color: #336699;");
         hbox.setPrefWidth(Globals.WINDOW_WIDTH);
         hbox.setPrefHeight(40);
-        HBox.setHgrow(imv, Priority.ALWAYS);
         hbox.setAlignment(Pos. TOP_RIGHT);
 
-        final Image img = new Image("heart.png");
-        imv.setImage(img);
-        imv2.setImage(img);
+        for(ImageView iv : imgView){
+            hbox.getChildren().add(iv);
+        }
 
-        hbox.getChildren().addAll(imv, imv2);
+        hbox.getChildren().addAll();
         Globals.gamePane.getChildren().addAll(hbox);
 
     }
