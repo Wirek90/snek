@@ -3,6 +3,8 @@ package com.codecool.snake.Controller;
 import com.codecool.snake.Model.entities.lasers.SimpleLaser;
 import com.codecool.snake.Model.entities.powerups.MedkitPowerUp;
 import com.codecool.snake.Model.entities.powerups.ShieldPowerUp;
+import com.codecool.snake.Model.entities.enemies.SimpleEnemyEagle;
+import com.codecool.snake.Model.entities.enemies.SimpleEnemyMongoose;
 import com.codecool.snake.View.GameLoop;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
@@ -25,6 +27,14 @@ public class Game extends Pane {
         new SimpleEnemy(this);
         new SimpleEnemy(this);
         new SimpleEnemy(this);
+
+        new SimpleEnemyMongoose(this);
+        new SimpleEnemyMongoose(this);
+        new SimpleEnemyMongoose(this);
+
+        new SimpleEnemyEagle(this);
+        new SimpleEnemyEagle(this);
+        new SimpleEnemyEagle(this);
 
         new SimplePowerup(this);
         new SimplePowerup(this);
