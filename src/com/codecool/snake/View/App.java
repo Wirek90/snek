@@ -24,7 +24,7 @@ import javafx.stage.Stage;
 
         @Override
             public void start(Stage primaryStage) {
-
+            Globals.primaryStage = primaryStage;
             //background settings
             final Image titleScreen = new Image( "title_screen.png" ); //title screen image
             final ImageView flashScreen_node = new ImageView();
@@ -52,18 +52,12 @@ import javafx.stage.Stage;
             btn.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    Game game = new Game();
-                    Globals.gamePane = game;
-                    SnekMenu gameMenu = new SnekMenu();
-                    gameMenu.generateMenu(game);
 
-                    SnekHealthMenu healthMenu = new SnekHealthMenu();
-                    healthMenu.generateHealthMenu(game);
+                   // Globals.game = new Game();
+                    System.out.println("EVENT!");
+                    Globals.gameLoop = new GameLoop();
+                    Globals.gameLoop.startGame(primaryStage);
 
-                    primaryStage.setTitle("Snake Game");
-                    primaryStage.setScene(new Scene(Globals.vBox, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
-                    primaryStage.show();
-                    game.start();
                 }
 
 

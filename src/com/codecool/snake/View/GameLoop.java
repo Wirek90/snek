@@ -1,9 +1,12 @@
 package com.codecool.snake.View;
 
+import com.codecool.snake.Controller.Game;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.Animatable;
 import javafx.animation.AnimationTimer;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class GameLoop extends AnimationTimer {
 
@@ -39,6 +42,31 @@ public class GameLoop extends AnimationTimer {
         }
     }
 
-    public void restart() {
+    public void startGame(Stage primaryStage) {
+        Globals.game = new Game();
+        Globals.gamePane = Globals.game;
+        SnekMenu gameMenu = new SnekMenu();
+        gameMenu.generateMenu();
+        SnekHealthMenu healthMenu = new SnekHealthMenu();
+        healthMenu.generateHealthMenu(Globals.game);
+        primaryStage.setTitle("Snake Game");
+        primaryStage.setScene(new Scene(Globals.vBox, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
+        primaryStage.show();
+        Globals.game.start();
+    }
+
+
+    public void restartGame() {
+        if (Globals.game != null) stop();
+        Globals.game = new Game();
+        Globals.gamePane = Globals.game;
+        SnekMenu gameMenu = new SnekMenu();
+        gameMenu.generateMenu();
+        SnekHealthMenu healthMenu = new SnekHealthMenu();
+        healthMenu.generateHealthMenu(Globals.game);
+        Globals.primaryStage.setTitle("Snake Game");
+        Globals.primaryStage.setScene(new Scene(Globals.vBox, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
+        Globals.primaryStage.show();
+        Globals.game.start();
     }
 }

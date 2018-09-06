@@ -4,15 +4,18 @@ import com.codecool.snake.Model.Globals;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import com.codecool.snake.View.GameLoop;
+import javafx.stage.Stage;
+
 public class SnekMenu {
 
-    public void generateMenu(Game game) {
+    public void generateMenu() {
         Globals.vBox = new VBox();
 
         MenuBar menuBar = new MenuBar();
@@ -41,35 +44,17 @@ public class SnekMenu {
             }
         });
 
-//        final javafx.scene.image.ImageView imv = new javafx.scene.image.ImageView();
-//
-//        HBox hbox = new HBox();
-//        hbox.setPadding(new Insets(5));
-//        hbox.setSpacing(30);
-//        hbox.setStyle("-fx-background-color: #336699;");
-//        hbox.setPrefWidth(Globals.WINDOW_WIDTH);
-//        hbox.setPrefHeight(40);
-//        HBox.setHgrow(imv, Priority.ALWAYS);
-//        hbox.setAlignment(Pos. TOP_RIGHT);
-//
-//        final Image image2 = new Image("heart.png");
-//        imv.setImage(image2);
-//
-//        hbox.getChildren().addAll(imv);
-//        game.getChildren().addAll(hbox);
 
-  //      primaryStage.setTitle("Snake Game");
-    //    primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
-      //  primaryStage.show();
-       // game.start();
+        menuRestartItem.setOnAction(event -> {
 
+                Globals.gameLoop.restartGame();
+        });
 
-        menuRestartItem.setOnAction(event -> Globals.gameLoop.restart());
         menu.getItems().setAll(menuRestartItem, menuPauseItem, menuCloseItem);
 
 
         menuBar.getMenus().addAll(menu, menuInfo, menuHealth);
-        Globals.vBox.getChildren().addAll(menuBar, game);
+        Globals.vBox.getChildren().addAll(menuBar, Globals.game);
 
     }
 }
