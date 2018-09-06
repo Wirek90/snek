@@ -3,6 +3,7 @@ package com.codecool.snake.Model;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
 import com.codecool.snake.View.GameLoop;
 import com.codecool.snake.Model.entities.GameEntity;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.image.Image;
 import java.util.Collections;
@@ -19,6 +20,7 @@ public class    Globals {
     public static final double WINDOW_WIDTH = 1000;
     public static final double WINDOW_HEIGHT = 700;
     public static VBox vBox;
+    public static HBox hBox;
     public static Image snakeHead = new Image("snake_head.png");
     public static Image snakeBody = new Image("snake_body.png");
     public static Image simpleEnemy = new Image("simple_enemy.png");

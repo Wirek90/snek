@@ -56,6 +56,10 @@ import javafx.stage.Stage;
                     Globals.gamePane = game;
                     SnekMenu gameMenu = new SnekMenu();
                     gameMenu.generateMenu(game);
+
+                    SnekHealthMenu healthMenu = new SnekHealthMenu();
+                    healthMenu.generateHealthMenu(game);
+
                     primaryStage.setTitle("Snake Game");
                     primaryStage.setScene(new Scene(Globals.vBox, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
                     primaryStage.show();
