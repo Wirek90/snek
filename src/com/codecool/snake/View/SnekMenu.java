@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class SnekMenu {
 
-    public void generateMenu(Game game) {
+    public void generateMenu() {
         Globals.vBox = new VBox();
 
         MenuBar menuBar = new MenuBar();

@@ -14,10 +14,9 @@ public class SnekHealthMenu {
     public void generateHealthMenu(Game game){
 
         Globals.hBox = new HBox();
-        for(int i = 0; i < 5; i++) {
-            final ImageView imv + "i" = new ImageView();
-        }
-        //final ImageView imv2 = new ImageView();
+
+        final ImageView imv = new ImageView();
+        final ImageView imv2 = new ImageView();
 
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(5));
@@ -30,7 +29,6 @@ public class SnekHealthMenu {
 
         final Image img = new Image("heart.png");
         imv.setImage(img);
-
         imv2.setImage(img);
 
         hbox.getChildren().addAll(imv, imv2);
