@@ -1,5 +1,6 @@
 package com.codecool.snake.Model;
 
+import com.codecool.snake.Controller.Game;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
 import com.codecool.snake.View.GameLoop;
 import com.codecool.snake.Model.entities.GameEntity;
@@ -13,12 +14,15 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 // class for holding all static stuff
 public class    Globals {
 
     public static final double WINDOW_WIDTH = 1000;
     public static final double WINDOW_HEIGHT = 700;
+    public static Stage primaryStage;
+    public static Game game;
     public static VBox vBox;
     public static HBox hBox;
     public static Image snakeHead = new Image("snake_head.png");

@@ -4,12 +4,15 @@ import com.codecool.snake.Model.Globals;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import com.codecool.snake.View.GameLoop;
+import javafx.stage.Stage;
+
 public class SnekMenu {
 
     public void generateMenu(Game game) {
@@ -42,18 +45,16 @@ public class SnekMenu {
         });
 
 
-  //      primaryStage.setTitle("Snake Game");
-    //    primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
-      //  primaryStage.show();
-       // game.start();
+        menuRestartItem.setOnAction(event -> {
 
+                Globals.gameLoop.restartGame();
+        });
 
-        menuRestartItem.setOnAction(event -> Globals.gameLoop.restart());
         menu.getItems().setAll(menuRestartItem, menuPauseItem, menuCloseItem);
 
 
         menuBar.getMenus().addAll(menu, menuInfo, menuHealth);
-        Globals.vBox.getChildren().addAll(menuBar, game);
+        Globals.vBox.getChildren().addAll(menuBar, Globals.game);
 
     }
 }
