@@ -55,8 +55,12 @@ public class Game extends Pane {
         new MedkitPowerUp(this);
 
         new ShieldPowerUp(this);
-        RespawnPowerUpsObject.respawn();
+        RespawnPowerUpsObject.respawnMedkit();
+        RespawnPowerUpsObject.respawnShield();
         RespawnPowerUpsObject.respawnEnemy();
+        RespawnPowerUpsObject.respawnEagle();
+        RespawnPowerUpsObject.respawnMongoose();
+        RespawnPowerUpsObject.respawnBerry();
 
 
 
