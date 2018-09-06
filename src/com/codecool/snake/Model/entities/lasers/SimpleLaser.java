@@ -6,11 +6,9 @@ import com.codecool.snake.Model.entities.Animatable;
 import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.Interactable;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
-import com.codecool.snake.Model.entities.powerups.MedkitPowerUp;
 import com.codecool.snake.Model.entities.powerups.SimplePowerup;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
 import javafx.geometry.Point2D;
-import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 
 public class SimpleLaser extends GameEntity implements Animatable, Interactable {

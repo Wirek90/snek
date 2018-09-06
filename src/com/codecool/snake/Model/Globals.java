@@ -29,7 +29,6 @@ public class    Globals {
     public static Image powerupBerry = new Image("powerup_berry.png");
     public static Image mongooseEnemy = new Image("mongoose_enemy.png");
     public static Image eagleEnemy = new Image("eagle_enemy.png");
-    //public static Image heart = new Image("heart.png");
     public static Image shieldPowerUp = new Image("shield.png");
     public static Image medkitPowerUp = new Image("medicine.png");
     public static Image simpleLaser = new Image("simplelaser.png");

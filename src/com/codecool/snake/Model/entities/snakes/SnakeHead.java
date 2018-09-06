@@ -14,7 +14,6 @@ public class SnakeHead extends GameEntity implements Animatable {
     private static final float speed = 1;
     private static final float turnRate = 1;
     private GameEntity tail; // the last element. Needed to know where to add the next part.
-    private int health;
 
 
     public SnakeHead(Pane pane, int xc, int yc) {
@@ -26,7 +25,6 @@ public class SnakeHead extends GameEntity implements Animatable {
         tail = this;
         setImage(Globals.snakeHead);
         pane.getChildren().add(this);
-
         addPart(4);
     }
 
@@ -62,11 +60,6 @@ public class SnakeHead extends GameEntity implements Animatable {
             System.out.println("Game Over");
             Globals.gameLoop.stop();
             Globals.gameOver = true;
-
-            //ButtonType restartButt = new ButtonType("RESTART");
-          //  ButtonType exitButt = new ButtonType("EXIT");
-           // Alert alert = new Alert(Alert.AlertType.INFORMATION,"GAME OVER!\nYOU SCORED: " + length, restartButt, exitButt);
-           // alert.show();
         }
     }
 
@@ -80,12 +73,11 @@ public class SnakeHead extends GameEntity implements Animatable {
 
     public void changeHealth(int diff) {
         Globals.health += diff;
-        SnekHealthMenu snekHealt = new SnekHealthMenu();
-        snekHealt.generateHealthMenu(Globals.game);
+        SnekHealthMenu snekHealth = new SnekHealthMenu();
+        snekHealth.generateHealthMenu(Globals.game);
     }
 
     public Integer checkHealth(){
-//        System.out.println("Player have " + health + " health");
         return Globals.health;
     }
 

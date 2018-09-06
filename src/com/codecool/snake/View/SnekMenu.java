@@ -16,7 +16,7 @@ public class SnekMenu {
 
 
         MenuItem menuCloseItem = new MenuItem("Close");
-        String info = "Use arrow keys to move. Press P to pause, R to restart. Beware of the mongoose!";
+        String info = "Use arrow keys to move. Beware of the mongoose!";
         Menu menuInfo = new Menu(info);
         menuInfo.setDisable(false);
 
