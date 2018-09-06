@@ -1,9 +1,12 @@
-package com.codecool.snake.View;
+package com.codecool.snake.Controller;
 
 import com.codecool.snake.Controller.Game;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.Animatable;
+import com.codecool.snake.View.GameOver;
+import com.codecool.snake.View.SnekHealthMenu;
+import com.codecool.snake.View.SnekMenu;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

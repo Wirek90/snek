@@ -1,17 +1,7 @@
 package com.codecool.snake.View;
-import com.codecool.snake.Controller.Game;
 import com.codecool.snake.Model.Globals;
-import javafx.application.Platform;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import com.codecool.snake.View.GameLoop;
-import javafx.stage.Stage;
 
 public class SnekMenu {
 
@@ -30,8 +20,8 @@ public class SnekMenu {
         Menu menuInfo = new Menu(info);
         menuInfo.setDisable(false);
 
-        Menu menuHealth = new Menu();
-        menuHealth.setDisable(false);
+
+
 
         menuCloseItem.setOnAction(event -> System.exit(0));
 
@@ -53,7 +43,7 @@ public class SnekMenu {
         menu.getItems().setAll(menuRestartItem, menuPauseItem, menuCloseItem);
 
 
-        menuBar.getMenus().addAll(menu, menuInfo, menuHealth);
+        menuBar.getMenus().addAll(menu, menuInfo);
         Globals.vBox.getChildren().addAll(menuBar, Globals.game);
 
     }

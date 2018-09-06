@@ -1,12 +1,11 @@
 package com.codecool.snake.Controller;
 
-import com.codecool.snake.Model.entities.GameEntity;
+import com.codecool.snake.Model.Respawn;
 import com.codecool.snake.Model.entities.lasers.SimpleLaser;
 import com.codecool.snake.Model.entities.powerups.MedkitPowerUp;
 import com.codecool.snake.Model.entities.powerups.ShieldPowerUp;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemyEagle;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemyMongoose;
-import com.codecool.snake.View.GameLoop;
 import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
 import com.codecool.snake.Model.entities.powerups.SimplePowerup;
@@ -18,14 +17,6 @@ public class Game extends Pane {
     SnakeHead snek;
     public Game() {
         Respawn respawnObject = new Respawn();
-//        GameEntity GameEntityObject = new GameEntity(this) {
-//            @Override
-//            public void destroy() {
-//                super.destroy();
-//            }
-//        };
-
-
         snek = new SnakeHead(this, 500, 500);
 
         new SimpleEnemy(this);

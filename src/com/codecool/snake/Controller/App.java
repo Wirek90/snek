@@ -1,8 +1,4 @@
-package com.codecool.snake.View;
-import com.codecool.snake.Controller.Game;
-import com.codecool.snake.Model.Globals;
-import com.codecool.snake.View.SnekMenu;
-import com.codecool.snake.View.SnekMenu;
+package com.codecool.snake.Controller;
 import com.codecool.snake.Model.Globals;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -12,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 

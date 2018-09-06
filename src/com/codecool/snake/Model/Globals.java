@@ -2,7 +2,7 @@ package com.codecool.snake.Model;
 
 import com.codecool.snake.Controller.Game;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
-import com.codecool.snake.View.GameLoop;
+import com.codecool.snake.Controller.GameLoop;
 import com.codecool.snake.Model.entities.GameEntity;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -10,9 +10,7 @@ import javafx.scene.image.Image;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
+
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 

@@ -21,7 +21,7 @@ public class SimpleLaser extends GameEntity implements Animatable, Interactable 
     public SimpleLaser(Pane pane, SnakeHead snake) {
         super(pane);
         pane.getChildren().add(this);
-        setImage(Globals.simpleLaser);//blue laser
+        setImage(Globals.simpleLaser);    //blue laser
          setX(snake.getX());
         setY(snake.getY());
         double dir = snake.getRotate();

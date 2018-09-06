@@ -11,7 +11,6 @@ import javafx.scene.layout.Pane;
 
 import java.util.Random;
 
-// a simple enemy TODO make better ones.
 public class SimpleEnemyEagle extends GameEntity implements Animatable, Interactable {
 
     private Point2D heading;
@@ -39,7 +38,6 @@ public class SimpleEnemyEagle extends GameEntity implements Animatable, Interact
         }
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());
-       // System.out.println(heading);
     }
 
     @Override
