@@ -29,7 +29,7 @@ public class SnekHealthMenu {
         imv.setImage(image2);
 
         hbox.getChildren().addAll(imv);
-        Globals.hBox.getChildren().addAll(hbox);
+        Globals.gamePane.getChildren().addAll(hbox);
 
     }
 }
