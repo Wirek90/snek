@@ -7,8 +7,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-   // private static final Platform Platform = new Platform();
-
     public static void main(String[] args) {
         launch(args);
     }
@@ -18,8 +16,6 @@ public class Main extends Application {
         App app = new App();
         app.start(primaryStage);
     }
-
-
-    }
+}
 
 

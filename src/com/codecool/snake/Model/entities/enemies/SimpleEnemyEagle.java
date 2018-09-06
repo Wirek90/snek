@@ -18,9 +18,9 @@ public class SimpleEnemyEagle extends GameEntity implements Animatable, Interact
 
     public SimpleEnemyEagle(Pane pane) {
         super(pane);
-
         setImage(Globals.eagleEnemy);
         pane.getChildren().add(this);
+
         int speed = 2;
         Random rnd = new Random();
         setX(rnd.nextDouble() * Globals.WINDOW_WIDTH);
