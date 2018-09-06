@@ -5,6 +5,7 @@ import com.codecool.snake.Model.Globals;
 import com.codecool.snake.Model.entities.Animatable;
 import com.codecool.snake.Model.Utils;
 import com.codecool.snake.Model.entities.Interactable;
+import com.codecool.snake.View.SnekHealthMenu;
 import javafx.geometry.Point2D;
 import javafx.scene.layout.Pane;
 
@@ -79,6 +80,8 @@ public class SnakeHead extends GameEntity implements Animatable {
 
     public void changeHealth(int diff) {
         Globals.health += diff;
+        SnekHealthMenu snekHealt = new SnekHealthMenu();
+        snekHealt.generateHealthMenu(Globals.game);
     }
 
     public Integer checkHealth(){

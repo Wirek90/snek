@@ -15,7 +15,7 @@ import java.util.Random;
 public class SimpleEnemy extends GameEntity implements Animatable, Interactable {
 
     private Point2D heading;
-    private static final int damage = 10;
+    private static final int damage = 20;
 
     public SimpleEnemy(Pane pane) {
         super(pane);
@@ -49,6 +49,6 @@ public class SimpleEnemy extends GameEntity implements Animatable, Interactable 
 
     @Override
     public String getMessage() {
-        return "10 damage";
+        return "20 damage";
     }
 }
