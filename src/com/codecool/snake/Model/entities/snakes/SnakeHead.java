@@ -11,7 +11,7 @@ import javafx.scene.layout.Pane;
 
 public class SnakeHead extends GameEntity implements Animatable {
 
-    private static final float speed = 1;
+    private static final float speed = 2;
     private static final float turnRate = 1;
     private GameEntity tail; // the last element. Needed to know where to add the next part.
 

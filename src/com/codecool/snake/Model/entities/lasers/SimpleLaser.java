@@ -6,6 +6,8 @@ import com.codecool.snake.Model.entities.Animatable;
 import com.codecool.snake.Model.entities.GameEntity;
 import com.codecool.snake.Model.entities.Interactable;
 import com.codecool.snake.Model.entities.enemies.SimpleEnemy;
+import com.codecool.snake.Model.entities.enemies.SimpleEnemyEagle;
+import com.codecool.snake.Model.entities.enemies.SimpleEnemyMongoose;
 import com.codecool.snake.Model.entities.powerups.SimplePowerup;
 import com.codecool.snake.Model.entities.snakes.SnakeHead;
 import javafx.geometry.Point2D;
@@ -36,7 +38,10 @@ public class SimpleLaser extends GameEntity implements Animatable, Interactable 
 
         for (GameEntity entity : Globals.getGameObjects()) {
             if (getBoundsInParent().intersects(entity.getBoundsInParent())) {
-                if (entity instanceof SimpleEnemy || entity instanceof SimplePowerup) {
+                if (entity instanceof SimpleEnemy ||
+                        entity instanceof SimplePowerup||
+                        entity instanceof SimpleEnemyEagle ||
+                        entity instanceof SimpleEnemyMongoose) {
                     destroy();
                     entity.destroy();
 
